@@ -5,6 +5,7 @@
 class Poneys
 {
     private $count = 8;
+    private $names = array();
 
     /**
      * Retourne le nombre de poneys
@@ -25,7 +26,16 @@ class Poneys
      */
     public function removePoneyFromField(int $number): void
     {
-        $this->count -= $number;
+        if ($number <= $this->count)
+        {
+            $this->count -= $number;
+        }
+        else {
+            throw new Exception ("Cannot remove more poneys than there are!");
+        }
+        
+        
+               
     }
 
     /**
@@ -35,7 +45,42 @@ class Poneys
      */
     public function getNames(): array
     {
+        return $names;
+    }
+
+
+    /**
+     * Ajoute un poney au champ
+     * 
+     * @param string $name Nom du poney à ajouter
+     * 
+     * @return void
+     */
+    public function addPoneyToField(string $name) : void 
+    {
+        $this->count += 1;
 
     }
+
+
+    /**
+     * Donne la disponibilité des places dans le champs
+     * 
+     * 
+     * @return bool 
+     */
+     public function getAvailability()
+     {
+        if ($this->count < 15) 
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+         
+     }
+
+
 }
 ?>
