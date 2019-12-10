@@ -66,13 +66,13 @@ class PoneysTest extends TestCase
     }
 
 
-    public function testRemovePoneyFromField3() : array
-    {
-        // Setup
-        $Poneys = new Poneys();
+    // public function testRemovePoneyFromField3() : array
+    // {
+    //     // Setup
+    //     $Poneys = new Poneys();
 
-        $resultat= array([]);
-        return $resultat;
-    }   
+    //     $resultat= array([[]]);
+    //     return $resultat;
+    // }   
 }
 ?>

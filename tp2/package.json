@@ -6,5 +6,9 @@
   "repository": "https://github.com/erwandf/insa",
   "author": "EDF",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "qunit": "^2.9.3"
+  }
 }
